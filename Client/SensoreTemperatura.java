@@ -23,7 +23,7 @@ public class SensoreTemperatura {
 
             String response = in.readLine();
             if (response != null) {
-                System.out.println("Server: " + response);
+                System.out.println("Server: "+response); // response
             }
 
             try { Thread.sleep(5000); } catch (InterruptedException e) {}
