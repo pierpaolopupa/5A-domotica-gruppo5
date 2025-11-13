@@ -7,8 +7,8 @@ public class SensoreContattoPorta {
     public static void main(String[] args) throws IOException 
     {
         Socket socket = new Socket("localhost", 12345); 
-        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
+        BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         Random rand = new Random();
 
         while (true) {
@@ -20,9 +20,9 @@ public class SensoreContattoPorta {
             json.put("tipo", "contatto");
             json.put("contatto", statoContatto); 
         
-            out.println(json.toString());
+            output.println(json.toString());
             
-            String response = in.readLine();
+            String response = input.readLine();
             if (response != null) {
                 System.out.println("Server: " + response);
             }
