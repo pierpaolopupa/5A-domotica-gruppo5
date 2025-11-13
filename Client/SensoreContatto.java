@@ -19,17 +19,14 @@ public class SensoreContattoPorta {
             json.put("id", rand.nextInt(1000)); 
             json.put("tipo", "contatto");
             json.put("contatto", statoContatto); 
-
-            
+        
             out.println(json.toString());
-
             
             String response = in.readLine();
             if (response != null) {
                 System.out.println("Server: " + response);
             }
 
-            
             try 
             {
                 Thread.sleep(5000);
