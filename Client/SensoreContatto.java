@@ -22,9 +22,9 @@ public class SensoreContattoPorta {
         
             output.println(json.toString());
             
-            String response = input.readLine();
-            if (response != null) {
-                System.out.println("Server: " + response);
+            String risposta = input.readLine();
+            if (risposta != null) {
+                System.out.println("Server: " + risposta);
             }
 
             try 
